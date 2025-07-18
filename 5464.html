@@ -1,0 +1,22 @@
+[2025-07-18 06:49:08] 错误：SSH私钥未找到 (/home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync_ssh/ssh)
+请先生成SSH密钥对并添加到GitHub账户：
+1. 运行 ssh-keygen -t rsa -b 4096
+2. 将公钥(~/.ssh/id_rsa.pub)添加到GitHub账户的SSH keys设置中
+[2025-07-18 06:50:41] 初始化本地仓库...
+[2025-07-18 06:50:41] 初始提交完成
+[2025-07-18 06:50:41] 开始监控目录: /home/lgl/www/php-nginx/PHP/lgl/zmt/wa
+[2025-07-18 06:50:41] 本地仓库位置: /home/lgl/www/php-nginx/PHP/lgl/zmt/wa
+[2025-07-18 06:50:41] 日志文件: /home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync_ssh/sync_to_github.log
+
+
+cd /home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync_ssh/git_backup_repo
+
+
+git config --global --add safe.directory /home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync/git_backup_repo
+
+
+rm -rf /home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync/git_backup_repo
+git clone git@github.com:lglasdf1221/zmt.git /home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync/git_backup_repo
+
+
+/home/lgl/www/php-nginx/PHP/lgl/zmt/GitHub_Sync/git_autosync.sh /home/lgl/www/php-nginx/PHP/lgl/zmt/wa
